@@ -1,0 +1,26 @@
+<p>animals works!</p>
+
+<div class="row">
+  <div class="col">
+    <h1 class="display-2">Állatok</h1>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Állat neve:</th>
+        <th scope="col">Neme</th>
+        <th scope="col">Élet röténete:</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let animal of animals"  >
+
+        <th scope="row">{{ animal.id }}</th>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
