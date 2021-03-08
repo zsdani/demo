@@ -8,7 +8,7 @@ import {AnimalService} from "../Services/animal.service";
   styleUrls: ['./animals.component.css']
 })
 export class AnimalsComponent implements OnInit {
-  public animals: Array<Animal> = [];
+  public animals: any;
 
   public animalss: Animal[] = [];
 
@@ -19,9 +19,7 @@ export class AnimalsComponent implements OnInit {
   public  ngOnInit(): void {
 
 
-    this.animalService.getAnimals().subscribe(data => {
-      this.animals = data;
-    })
+    this.animals= this.animalService.getAnimals()
   }
 
 

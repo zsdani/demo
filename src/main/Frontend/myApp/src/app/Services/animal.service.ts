@@ -14,23 +14,32 @@ export class AnimalService {
 
   constructor(
     private http: HttpClient
-  ) { }
-
-
-  public getAnimals(): Observable<Array<Animal>> {
-    return this.http.get<Array<Animal>>('http://localhost:8080/api/animal',httpOptions);
+  ) {
   }
 
 
 
-/*
-public getAnimals(): Promise<Animal[]> {
- return this.http.get<Animal[]>(`${this.animalURL}`, httpOptions).toPromise();
-}
+  public async getAnimals(): Promise<any> {
+    let resp = await fetch(this.animalURL).then(response => {
+      response.json();
 
- */
+    });
+    console.log(resp);
+    return resp;
 
 
+    //this.http.get<Array<Animal>>('http://localhost:8080/api/animal',httpOptions);
+
+
+  }
+
+
+  /*
+  public getAnimals(): Promise<Animal[]> {
+   return this.http.get<Animal[]>(`${this.animalURL}`, httpOptions).toPromise();
+  }
+
+   */
 
 
 }

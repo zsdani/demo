@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/animal")
 public class AnimalController {
 
