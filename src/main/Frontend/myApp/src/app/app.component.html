@@ -1,5 +1,31 @@
 
 
+<div class="div" fxShow="false" fxShow.gt-sm>
+  <button class="mat-button" href="/issues" routerLink="/issues">Kezdőoldal</button>
+
+  <button class="mat-button" href="/issues" routerLink="/issues">Örökbefogadás</button>
+
+  <button class="mat-button" [matMenuTriggerFor]="donationMenu">Támogatás</button>
+    <mat-menu #donationMenu="matMenu" yPosition="below">
+      <button class="mat-menu-item">Pénz támogatás</button>
+      <button class="mat-menu-item">Étel támogatás</button>
+      <button class="mat-menu-item">Adó 1%</button>
+    </mat-menu>
+
+  <button class="mat-button" [matMenuTriggerFor]="volunteeringMenu">Önkénteskedés</button>
+    <mat-menu #volunteeringMenu="matMenu" xPosition="before">
+      <button class="mat-menu-item">Sétáltaltás</button>
+      <button class="mat-menu-item">Szépségápolás</button>
+      <button class="mat-menu-item">Gondozás</button>
+  </mat-menu>
+
+  <button class="mat-button" href="/issues" routerLink="/issues">Elérhetőségeink</button>
+
+  <button class="mat-button-right" href="/issues" routerLink="/issues">Profil</button>
+</div>
+
 <app-animals></app-animals>
 
 <router-outlet></router-outlet>
+
+

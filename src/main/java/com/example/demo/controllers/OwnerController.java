@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.dal.dto.AppUserDto;
 import com.example.demo.dal.entities.Owner;
 
 import com.example.demo.services.OwnerService;
@@ -25,6 +26,7 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
+
     // api/movie/id?id=5
     @GetMapping("/id")
     public ResponseEntity<Owner> findOwnerById(@RequestParam long id) throws DataNotFoundException {
@@ -32,7 +34,7 @@ public class OwnerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Owner>> findAllOwners() throws DataNotFoundException {
+    public ResponseEntity<List<AppUserDto>> findAllOwners() throws DataNotFoundException {
         return ResponseEntity.ok(ownerService.findAllOwners());
     }
 
@@ -49,10 +51,15 @@ public class OwnerController {
 
     }
 
-
-
     @DeleteMapping
     public ResponseEntity<Owner> deleteOwner(@RequestParam long id) throws DataNotFoundException {
         return ResponseEntity.ok(ownerService.deleteOwner(id));
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Owner appUser) {
+        return ResponseEntity.ok(ownerService.login(appUser));
+    }
+
+
 }

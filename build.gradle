@@ -24,8 +24,8 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 
 	//Spring security
-	//compile('org.springframework.boot:spring-boot-starter-security')
-	//implementation 'com.auth0:java-jwt:3.4.0'
+	compile('org.springframework.boot:spring-boot-starter-security')
+	implementation 'com.auth0:java-jwt:3.4.0'
 
 }
 

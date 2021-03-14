@@ -1,26 +1,44 @@
 <p>animals works!</p>
 
-<div class="row">
-  <div class="col">
-    <h1 class="display-2">Állatok</h1>
+<br>
+<br>
+    <h1 >Állatok</h1>
 
-    <table class="table">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Állat neve:</th>
-        <th scope="col">Neme</th>
-        <th scope="col">Élet röténete:</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let animal of animals"  >
+<table class="tabla">
+  <tbody >
+  <tr class="cella" *ngFor="let animal of animals"  >
+    <td class="kep">{{animal.imagine}} </td>
+    <td class="adatok">
+      <h1 class="name">{{ animal.name }}</h1> <br>
+      <ul>
+      <li>{{ animal.gender }}</li>
+      <li>{{ animal.breed }}</li>
+      <li>{{ animal.lifestory}}</li>
+      </ul>
 
-        <th scope="row">{{ animal.id }}</th>
 
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+
+
+  </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+        <div class="row" *ngFor="let animal of animals">
+          <div class="column_p">
+            {{animal.imagine}}
+          </div>
+          <div class="column_d">
+            {{ animal.name }}
+            {{ animal.gender }}
+            <td>{{ animal.breed }}</td>
+          </div>
+        </div>
+
+
+
+
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 

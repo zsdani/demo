@@ -8,18 +8,21 @@ import {AnimalService} from "../Services/animal.service";
   styleUrls: ['./animals.component.css']
 })
 export class AnimalsComponent implements OnInit {
-  public animals: any;
+  //public animals: any;
 
-  public animalss: Animal[] = [];
+  public animals: Animal[] = [];
+  //animals: Array<Animal> = [];
+
+  //public animalss: Animal[] = [];
 
   constructor(
     private animalService: AnimalService
   ) { }
 
-  public  ngOnInit(): void {
+  public async  ngOnInit(): Promise<void> {
 
 
-    this.animals= this.animalService.getAnimals()
+    this.animals= await this.animalService.getAnimals();
   }
 
 
