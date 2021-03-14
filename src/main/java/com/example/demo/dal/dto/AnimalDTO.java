@@ -16,10 +16,8 @@ import java.util.Optional;
 
 
 @Data
-@AllArgsConstructor // minden argumentummla konstruktor
-@NoArgsConstructor // ures konstruktor
-@EqualsAndHashCode(callSuper = true) // legenerálja
-@Table(name = "animalsDTO") // tábla elnevezés
+@AllArgsConstructor
+@NoArgsConstructor
 public class AnimalDTO extends BaseEntity {
 
     private String name;
