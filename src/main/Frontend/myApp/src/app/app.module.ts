@@ -16,11 +16,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './login/login.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import {FormBuilder, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ConnectionComponent } from './connection/connection.component';
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalsComponent,
+    LoginComponent,
+    MainpageComponent,
+    ConnectionComponent,
 
 
 
@@ -33,8 +42,17 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatSliderModule,
     MatMenuModule,
+    MatSelectModule,
     MatIconModule,
     MatToolbarModule,
+    FormsModule,
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatOptionModule,
+
+
 
 
   ],

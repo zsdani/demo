@@ -1,9 +1,6 @@
 package com.example.demo.dal.dto;
 
-import com.example.demo.dal.entities.Animal;
-import com.example.demo.dal.entities.AnimalType;
-import com.example.demo.dal.entities.BaseEntity;
-import com.example.demo.dal.entities.Shelter;
+import com.example.demo.dal.entities.*;
 import com.example.demo.services.exceptions.DataNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +16,10 @@ import java.util.Optional;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AnimalDTO extends BaseEntity {
+
+    private long id;
+
+    private EntityStatus entityStatus;
 
     private String name;
 

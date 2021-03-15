@@ -1,4 +1,8 @@
+import {Shelter} from "./Shelter";
+
 export class Animal {
+
+
 
   id: number = 0;
   name: string = '';
@@ -9,7 +13,8 @@ export class Animal {
   age: number=0;
   lifestory: string = '';
   imagine: string = '';
-  shleter_id: any;
+  shelter_id: any;
+
 
 
 

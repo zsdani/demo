@@ -9,8 +9,10 @@ import {AnimalService} from "../Services/animal.service";
 })
 export class AnimalsComponent implements OnInit {
   //public animals: any;
-
+  selectedgender: number=-1;
   public animals: Animal[] = [];
+  public genders: number[] = [0,1,-1];
+  public gender:number=-1;
   //animals: Array<Animal> = [];
 
   //public animalss: Animal[] = [];
